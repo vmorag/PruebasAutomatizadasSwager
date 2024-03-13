@@ -1,0 +1,223 @@
+[
+  {
+    "line": 3,
+    "elements": [
+      {
+        "start_timestamp": "2024-03-13T03:03:43.737Z",
+        "before": [
+          {
+            "result": {
+              "duration": 686841000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepdefinitions.Base.seCreaElRequestDeLaPeticionDelServicio()"
+            }
+          },
+          {
+            "result": {
+              "duration": 27024000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepdefinitions.Base.sePreparaElActor()"
+            }
+          }
+        ],
+        "line": 7,
+        "name": "Successful message from the create user service",
+        "description": "",
+        "id": "user-service-api-consumption;successful-message-from-the-create-user-service",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1884548000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the user sends a request to the create user service",
+            "match": {
+              "location": "stepdefinitions.UserServiceStepDefinition.theUserSendsRequestCreateUserService(io.cucumber.datatable.DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "username",
+                  "Viviana"
+                ]
+              },
+              {
+                "cells": [
+                  "password",
+                  "Mora"
+                ]
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 76809000,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "The user should see a successful response from the user creation",
+            "match": {
+              "location": "stepdefinitions.UserServiceStepDefinition.theUserShouldSeeASuccessfulResponseFromTheUserCreation()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@UserCreation"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-03-13T03:03:46.588Z",
+        "before": [
+          {
+            "result": {
+              "duration": 2760000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepdefinitions.Base.seCreaElRequestDeLaPeticionDelServicio()"
+            }
+          },
+          {
+            "result": {
+              "duration": 1180000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepdefinitions.Base.sePreparaElActor()"
+            }
+          }
+        ],
+        "line": 14,
+        "name": "Get user by user name Success Message",
+        "description": "",
+        "id": "user-service-api-consumption;get-user-by-user-name-success-message",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 631011000,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "the user sends a request to get user by user name",
+            "match": {
+              "location": "stepdefinitions.UserServiceStepDefinition.theUserSendsARequestToGetUserByUserName(io.cucumber.datatable.DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "username",
+                  "theUser"
+                ]
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 23924000,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "The user should see a successful response user by user name",
+            "match": {
+              "location": "stepdefinitions.UserServiceStepDefinition.theUserShouldSeeASuccessfulResponseUserByUserName()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@GetUser"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-03-13T03:03:47.265Z",
+        "before": [
+          {
+            "result": {
+              "duration": 2192000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepdefinitions.Base.seCreaElRequestDeLaPeticionDelServicio()"
+            }
+          },
+          {
+            "result": {
+              "duration": 975000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepdefinitions.Base.sePreparaElActor()"
+            }
+          }
+        ],
+        "line": 20,
+        "name": "Delete user by user name Success Message",
+        "description": "",
+        "id": "user-service-api-consumption;delete-user-by-user-name-success-message",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 531323000,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "the user sends a request to delete user by user name",
+            "match": {
+              "location": "stepdefinitions.UserServiceStepDefinition.theUserSendsARequestToDeleteUserByUserName(io.cucumber.datatable.DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "username",
+                  "22222"
+                ]
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 15318000,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "The user should see a successful response delete by user name",
+            "match": {
+              "location": "stepdefinitions.UserServiceStepDefinition.theUserShouldSeeASuccessfulResponseDeleteByUserName()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@DeletUser"
+          }
+        ]
+      }
+    ],
+    "name": "User Service API Consumption",
+    "description": "",
+    "id": "user-service-api-consumption",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/ServiceUser.feature",
+    "tags": []
+  }
+]

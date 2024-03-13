@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="User Service API Consumption" skipped="0" tests="3" time="3.99" timestamp="2024-03-12 10:03:43"><testcase name="Successful message from the create user service"/><testcase name="Get user by user name Success Message"/><testcase name="Delete user by user name Success Message"/></testsuite>

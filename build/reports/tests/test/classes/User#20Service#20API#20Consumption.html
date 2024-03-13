@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Class User Service API Consumption</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class User Service API Consumption</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/default-package.html">default-package</a> &gt; User Service API Consumption</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">3</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">4.201s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+<li>
+<a href="#tab2">Standard error</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">Delete user by user name Success Message</td>
+<td class="success">0.573s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Get user by user name Success Message</td>
+<td class="success">0.677s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Successful message from the create user service</td>
+<td class="success">2.951s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>
+@UserCreation
+Scenario: Successful message from the create user service               ?[90m# src/test/resources/features/ServiceUser.feature:7?[0m
+Step argument class io.cucumber.core.gherkin.messages.GherkinMessagesDataTableArgument
+Request method:	GET
+Request URI:	https://petstore3.swagger.io/api/v3/user/login?username=Viviana&amp;password=Mora
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	username=Viviana
+				password=Mora
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		&lt;none&gt;
+Multiparts:		&lt;none&gt;
+Body:			&lt;none&gt;
+  ?[32mWhen ?[0m?[32mthe user sends a request to the create user service?[0m              ?[90m# stepdefinitions.UserServiceStepDefinition.theUserSendsRequestCreateUserService(io.cucumber.datatable.DataTable)?[0m
+HTTP/1.1 200 OK
+Date: Wed, 13 Mar 2024 03:03:46 GMT
+Content-Type: application/json
+Content-Length: 43
+Connection: keep-alive
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+Access-Control-Expose-Headers: Content-Disposition
+X-Rate-Limit: 5000
+X-Expires-After: Wed Mar 13 04:03:46 GMT 2024
+Server: Jetty(9.4.53.v20231009)
+
+Logged in user session: 1469420327963491683
+  ?[32mThen ?[0m?[32mThe user should see a successful response from the user creation?[0m ?[90m# stepdefinitions.UserServiceStepDefinition.theUserShouldSeeASuccessfulResponseFromTheUserCreation()?[0m
+
+@GetUser
+Scenario: Get user by user name Success Message                    ?[90m# src/test/resources/features/ServiceUser.feature:14?[0m
+Step argument class io.cucumber.core.gherkin.messages.GherkinMessagesDataTableArgument
+Request method:	GET
+Request URI:	https://petstore3.swagger.io/api/v3/user/theUser
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	&lt;none&gt;
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Headers:		username=theUser
+				Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		&lt;none&gt;
+Multiparts:		&lt;none&gt;
+Body:			&lt;none&gt;
+  ?[32mWhen ?[0m?[32mthe user sends a request to get user by user name?[0m           ?[90m# stepdefinitions.UserServiceStepDefinition.theUserSendsARequestToGetUserByUserName(io.cucumber.datatable.DataTable)?[0m
+HTTP/1.1 200 OK
+Date: Wed, 13 Mar 2024 03:03:47 GMT
+Content-Type: application/json
+Content-Length: 143
+Connection: keep-alive
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+Access-Control-Expose-Headers: Content-Disposition
+Server: Jetty(9.4.53.v20231009)
+
+{
+    &quot;id&quot;: 10,
+    &quot;username&quot;: &quot;theUser&quot;,
+    &quot;firstName&quot;: &quot;John&quot;,
+    &quot;lastName&quot;: &quot;James&quot;,
+    &quot;email&quot;: &quot;john@email.com&quot;,
+    &quot;password&quot;: &quot;12345&quot;,
+    &quot;phone&quot;: &quot;12345&quot;,
+    &quot;userStatus&quot;: 1
+}
+io.restassured.internal.ValidatableResponseImpl@24e2355c
+  ?[32mThen ?[0m?[32mThe user should see a successful response user by user name?[0m ?[90m# stepdefinitions.UserServiceStepDefinition.theUserShouldSeeASuccessfulResponseUserByUserName()?[0m
+
+@DeletUser
+Scenario: Delete user by user name Success Message                   ?[90m# src/test/resources/features/ServiceUser.feature:20?[0m
+Step argument class io.cucumber.core.gherkin.messages.GherkinMessagesDataTableArgument
+Request method:	DELETE
+Request URI:	https://petstore3.swagger.io/api/v3/user/22222
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	&lt;none&gt;
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Headers:		username=22222
+				Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		&lt;none&gt;
+Multiparts:		&lt;none&gt;
+Body:			&lt;none&gt;
+  ?[32mWhen ?[0m?[32mthe user sends a request to delete user by user name?[0m          ?[90m# stepdefinitions.UserServiceStepDefinition.theUserSendsARequestToDeleteUserByUserName(io.cucumber.datatable.DataTable)?[0m
+HTTP/1.1 200 OK
+Date: Wed, 13 Mar 2024 03:03:47 GMT
+Content-Length: 0
+Connection: keep-alive
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+Access-Control-Expose-Headers: Content-Disposition
+Server: Jetty(9.4.53.v20231009)
+io.restassured.internal.ValidatableResponseImpl@1fca53a7
+  ?[32mThen ?[0m?[32mThe user should see a successful response delete by user name?[0m ?[90m# stepdefinitions.UserServiceStepDefinition.theUserShouldSeeASuccessfulResponseDeleteByUserName()?[0m
+</pre>
+</span>
+</div>
+<div id="tab2" class="tab">
+<h2>Standard error</h2>
+<span class="code">
+<pre>[Test worker] INFO io.cucumber.core.plugin.SerenityReporter - Running feature from file:///Users/usuario/Downloads/PruebasAutomatizadasSwager/src/test/resources/features/ServiceUser.feature
+[Test worker] INFO  - 
+ _____ _____ ____ _____   ____ _____  _    ____ _____ _____ ____  
+|_   _| ____/ ___|_   _| / ___|_   _|/ \  |  _ \_   _| ____|  _ \ 
+  | | |  _| \___ \ | |   \___ \ | | / _ \ | |_) || | |  _| | | | |
+  | | | |___ ___) || |    ___) || |/ ___ \|  _ &lt; | | | |___| |_| |
+  |_| |_____|____/ |_|   |____/ |_/_/   \_\_| \_\|_| |_____|____/ 
+
+Successful message from the create user service(user-service-api-consumption;successful-message-from-the-create-user-service)
+-------------------------------------------------------------------
+[Test worker] INFO  - 
+        __    _____ _____ ____ _____   ____   _    ____  ____  _____ ____  
+  _     \ \  |_   _| ____/ ___|_   _| |  _ \ / \  / ___|/ ___|| ____|  _ \ 
+ (_)_____| |   | | |  _| \___ \ | |   | |_) / _ \ \___ \\___ \|  _| | | | |
+  _|_____| |   | | | |___ ___) || |   |  __/ ___ \ ___) |___) | |___| |_| |
+ (_)     | |   |_| |_____|____/ |_|   |_| /_/   \_\____/|____/|_____|____/ 
+        /_/                                                                
+
+Successful message from the create user service
+----------------------------------------------------------------------------
+[Test worker] INFO io.cucumber.core.plugin.SerenityReporter - Running feature from file:///Users/usuario/Downloads/PruebasAutomatizadasSwager/src/test/resources/features/ServiceUser.feature
+[Test worker] INFO  - 
+ _____ _____ ____ _____   ____ _____  _    ____ _____ _____ ____  
+|_   _| ____/ ___|_   _| / ___|_   _|/ \  |  _ \_   _| ____|  _ \ 
+  | | |  _| \___ \ | |   \___ \ | | / _ \ | |_) || | |  _| | | | |
+  | | | |___ ___) || |    ___) || |/ ___ \|  _ &lt; | | | |___| |_| |
+  |_| |_____|____/ |_|   |____/ |_/_/   \_\_| \_\|_| |_____|____/ 
+
+Get user by user name Success Message(user-service-api-consumption;get-user-by-user-name-success-message)
+-------------------------------------------------------------------
+[Test worker] INFO  - 
+        __    _____ _____ ____ _____   ____   _    ____  ____  _____ ____  
+  _     \ \  |_   _| ____/ ___|_   _| |  _ \ / \  / ___|/ ___|| ____|  _ \ 
+ (_)_____| |   | | |  _| \___ \ | |   | |_) / _ \ \___ \\___ \|  _| | | | |
+  _|_____| |   | | | |___ ___) || |   |  __/ ___ \ ___) |___) | |___| |_| |
+ (_)     | |   |_| |_____|____/ |_|   |_| /_/   \_\____/|____/|_____|____/ 
+        /_/                                                                
+
+Get user by user name Success Message
+----------------------------------------------------------------------------
+[Test worker] INFO io.cucumber.core.plugin.SerenityReporter - Running feature from file:///Users/usuario/Downloads/PruebasAutomatizadasSwager/src/test/resources/features/ServiceUser.feature
+[Test worker] INFO  - 
+ _____ _____ ____ _____   ____ _____  _    ____ _____ _____ ____  
+|_   _| ____/ ___|_   _| / ___|_   _|/ \  |  _ \_   _| ____|  _ \ 
+  | | |  _| \___ \ | |   \___ \ | | / _ \ | |_) || | |  _| | | | |
+  | | | |___ ___) || |    ___) || |/ ___ \|  _ &lt; | | | |___| |_| |
+  |_| |_____|____/ |_|   |____/ |_/_/   \_\_| \_\|_| |_____|____/ 
+
+Delete user by user name Success Message(user-service-api-consumption;delete-user-by-user-name-success-message)
+-------------------------------------------------------------------
+[Test worker] INFO  - 
+        __    _____ _____ ____ _____   ____   _    ____  ____  _____ ____  
+  _     \ \  |_   _| ____/ ___|_   _| |  _ \ / \  / ___|/ ___|| ____|  _ \ 
+ (_)_____| |   | | |  _| \___ \ | |   | |_) / _ \ \___ \\___ \|  _| | | | |
+  _|_____| |   | | | |___ ___) || |   |  __/ ___ \ ___) |___) | |___| |_| |
+ (_)     | |   |_| |_____|____/ |_|   |_| /_/   \_\____/|____/|_____|____/ 
+        /_/                                                                
+
+Delete user by user name Success Message
+----------------------------------------------------------------------------
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 7.5.1</a> at 12/03/2024, 10:03:49 p. m.</p>
+</div>
+</div>
+</body>
+</html>
